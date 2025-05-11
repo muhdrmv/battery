@@ -60,11 +60,54 @@
         flex-direction: column;
       }
     }
+    .video-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.video-side {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.3);
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cards-side {
+  padding: 2rem;
+  background: #121212;
+  gap: 20px;
+}
+
+
   </style>
 </head>
 <body>
-     <div class="background-ball" style="width: 90px; height: 90px; top: 50%; left: 45%;"></div>
-     <img id="car-move" src="./1361479_200.svg" alt="" style="width: 380px; height: 380px; top: 12%; left: -11%; position: absolute; overflow: hidden;">
+     <!-- <div class="background-ball" style="width: 90px; height: 90px; top: 50%; left: 45%;"></div> -->
+     <!-- <img id="car-move" src="./1361479_200.svg" alt="" style="width: 380px; height: 380px; top: 12%; left: -11%; position: absolute; overflow: hidden;"> -->
      <img style="width: 480px; height: 480px; top: 0%; left: 60%; position: absolute;" src="./vga-cable.png" alt="">
      
      <!-- Card Container -->
@@ -118,9 +161,46 @@
                <p>This is the first glassmorphic card.</p>
           </div>
      </div>
+     <!-- Video Background -->
+         <!-- Section with 2 Sides: Video + Cards -->
+<section class="video-section d-flex flex-wrap">
+     <!-- Left: Video -->
+     <div class="video-side col-md-6">
+       <div class="video-wrapper">
+         <video autoplay muted loop playsinline>
+           <source src="bg.mp4" type="video/mp4" />
+           Your browser does not support the video tag.
+         </video>
+         <div class="video-overlay"></div>
+       </div>
+     </div>
+   
+     <!-- Right: Glass Cards -->
+     <div class="cards-side col-md-6 d-flex align-items-center justify-content-center flex-column">
+       <div class="glass-card mb-4" data-aos="fade-right">
+         <img src="./mechanic.png" alt="Mechanic" class="mb-3" style="width: 80px; height: 80px;" />
+         <h4 class="text-center">Card One</h4>
+         <p class="text-center">This is the first glassmorphic card.</p>
+       </div>
+       <div class="glass-card mb-4" data-aos="fade-left">
+         <img src="./battery.png" alt="Battery" class="mb-3" style="width: 80px; height: 80px;" />
+         <h4 class="text-center">Card Two</h4>
+         <p class="text-center">This is the second glassmorphic card.</p>
+       </div>
+       <div class="glass-card" data-aos="fade-up">
+         <img src="./checklist.png" alt="Checklist" class="mb-3" style="width: 80px; height: 80px;" />
+         <h4 class="text-center">Card Three</h4>
+         <p class="text-center">This is the third glassmorphic card.</p>
+       </div>
+     </div>
+   </section>
+   
+
+   
      <div class="card-container container-fluid">
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus reprehenderit veniam cum, eligendi officiis ut amet sed, asperiores at nobis enim debitis itaque soluta magni atque minima ipsam ipsa possimus.</p>
      </div>
+
 
      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
      <script>
